@@ -1,0 +1,20 @@
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    const socket = io();
+
+    // Listening for slide changes
+    socket.on('updateSlide', (slideNumber) => {
+        // Change slide on user's screen
+        showSlide(slideNumber);
+    });
+
+    // Listening for captions
+    socket.on('caption', (text) => {
+        document.getElementById('caption').innerText = text;
+    });
+
+    function showSlide(slideNumber){
+        console.error('i haven\'t written code for this yet so chillax')
+    }
+</script>
+<p id="caption"></p>
